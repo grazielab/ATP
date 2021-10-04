@@ -36,5 +36,4 @@ public class Produto {
     public double getValor(){
         return this.valor;
     }
-
 }
