@@ -9,7 +9,6 @@ public class Produto {
     public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
-
     public int getCodigo() {
         return this.codigo;
     }
@@ -18,7 +17,6 @@ public class Produto {
     public void setNome(String nome) {
         this.nome = nome;
     }
-
     public String getNome() {
         return this.nome;
     }
