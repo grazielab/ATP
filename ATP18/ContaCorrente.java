@@ -1,16 +1,16 @@
 public class ContaCorrente {
 
-    private int agencia;
+    private String agencia;
     private int numero;
     private int codigo;
     private double saldo;
 
 
     // AGENCIA BANCO
-    public void setAgencia(int agencia){
+    public void setAgencia(String agencia){
         this.agencia = agencia;
     }
-    public int getAgencia(){
+    public String getAgencia(){
         return this.agencia;
     }
 
