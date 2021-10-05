@@ -1,23 +1,21 @@
 public class Coordenador extends Funcionario {
 
-    private String cursoC;
-    private double bonus = 0.10;
+    private String coordenador;
+    private double bonus;
 
      // CURSO COORDENADO
-     public void setCurso(String cursoC) {
-        this.cursoC = cursoC;
+     public void setCoordenador(String coordenador) {
+        this.coordenador = coordenador;
     }
-    public String getCurso() {
-        return cursoC;
+    public String getCoordenador() {
+        return coordenador;
     }
 
      // BONUS
-     public void setBonus(Double bonus) {
+     public void setBonus(double bonus){
         this.bonus = bonus;
     }
     public double getBonus() {
         return bonus;
-    }
-
-    
+    }   
 }

@@ -1,7 +1,7 @@
 public class Aluno extends Pessoa{
 
     private String curso;
-    private char turma;
+    private int turma;
 
     // CURSO
     public void setCurso(String curso) {
@@ -11,11 +11,11 @@ public class Aluno extends Pessoa{
         return curso;
     }
 
-    // CURSO
-    public void setTurma(char turma) {
+    // Turma
+    public void setTurma(int turma) {
         this.turma = turma;
     }
-    public char getTurma() {
+    public int getTurma() {
         return turma;
     }
     
