@@ -2,22 +2,25 @@ public class Universidade {
     public static void main(String[] args) {
         
         Funcionario f = new Funcionario();
-        f.setNome("Joey");
-        f.setSobreome("Tribbiani");
-        f.setMatricula(6485);
+        f.setNome("Mike");
+        f.setSobreome("Hannigan");
+        f.setMatricula(648565);
         f.setSalario("R$ 3.000");
-        f.setDepartamento("Ensino");
+        f.setDepartamento("Administrativo");
 
         Coordenador c = new Coordenador();
-        c.setCoordenador("Curso de Atuação");
-        c.setBonus(200);
+        c.setNome("Joey");
+        c.setSobreome("Tribbiani");
+        c.setMatricula(695841);
+        c.setDepartamento("Educação");
+        c.setCoordenador("Atuação");
         c.setSalario("R$ 6.000");
-        c.setDepartamento("Ensino");
+        c.setBonus(200);
 
         Aluno a = new Aluno();
         a.setNome("Graziela");
         a.setSobreome("Bartyra Bressanini Beckhauser");
-        a.setMatricula(1911);
+        a.setMatricula(221911);
         a.setCurso("Atuação");
         a.setTurma(2);
 
@@ -30,11 +33,13 @@ public class Universidade {
         System.out.println("Departamento: " + f.getDepartamento() + "\n");
 
         System.out.println(" -- Coordenador -- ");
-        System.out.println("Coordenador: " + c.getCoordenador());
-        System.out.println("Bônus: R$ " + c.getBonus());
-        System.out.println("Salário: " + c.getSalario());
+        System.out.println("Nome completo: " + c.getNome() + " " + c.getSobrenome());
+        System.out.println("Matricula: " + c.getMatricula());
         System.out.println("Departamento: " + c.getDepartamento() + "\n");
-
+        System.out.println("Curso Coordenado: " + c.getCoordenador());
+        System.out.println("Salário: " + c.getSalario());
+        System.out.println("Bônus: R$ " + c.getBonus());
+        
         System.out.println(" -- Aluno -- ");
         System.out.println("Nome completo: " + a.getNome() + " " + a.getSobrenome());
         System.out.println("Matricula: " + a.getMatricula());
