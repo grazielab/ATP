@@ -2,16 +2,16 @@ import java.util.Scanner;
 
 public class Pessoa {
     public static void main(String[] args) {
-        PessoaFisica[] pessoas = new PessoaFisica[6];
+        PessoaFisica[] pessoa = new PessoaFisica[5];
         
         PessoaFisica p1 = new PessoaFisica();
         PessoaFisica p2 = new PessoaFisica();
         PessoaFisica p3 = new PessoaFisica();
         PessoaFisica p4 = new PessoaFisica();
         PessoaFisica p5 = new PessoaFisica();
-        PessoaFisica p6 = new PessoaFisica();
 
-        p1.setCodigo(0123);
+        //Pessoas 
+        p1.setCodigo(5678);
         p1.setNome("Rachel");
         p1.setSobrenome("Green");
         p1.setIdade(28);
@@ -46,13 +46,19 @@ public class Pessoa {
         p5.setRG("6.365.870");
         p5.setCPF("870.219.372-09");
 
-        p5.setCodigo(1516);
-        p5.setNome("Joey");
-        p5.setSobrenome("Tribbiani");
-        p5.setIdade(26);
-        p5.setRG("2.750.193");
-        p5.setCPF("159.963.753-08");
-        
+        // Vetor
+        pessoa[0] = p1;
+        pessoa[1] = p2;
+        pessoa[2] = p3;
+        pessoa[3] = p4;
+        pessoa[4] = p5;
+
+        for (PessoaFisica p : pessoa){
+            System.out.println("Código: " + p.getCodigo());
+            System.out.println("Nome completo: " + p.getNome() + " " + p.getSobrenome());
+            System.out.println("Idade: " + p.getIdade());
+            System.out.println("RG: " + p.getRG());
+            System.out.println("CPF: " + p.getCPF() + "\n");
+        }
     }
-    
 }
