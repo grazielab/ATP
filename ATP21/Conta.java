@@ -1,13 +1,19 @@
-public class Conta{
+public class Conta {
 
-    private String saldo;
+    private double saldo;
     private int codigo;
 
+    public void transferencia(double valorTransferencia) {
+        saldo -= valorTransferencia;
+        System.out.printf("Transferencia realizada: %.2f \n", valorTransferencia);
+    }
+
     // SALDO
-    public void setSaldo(String saldo) {
+    public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
-    public String getSaldo() {
+
+    public double getSaldo() {
         return saldo;
     }
 
@@ -15,7 +21,9 @@ public class Conta{
     public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
-    public int getCodig() {
+
+    public int getCodigo() {
         return codigo;
     }
+
 }
