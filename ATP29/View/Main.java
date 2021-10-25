@@ -14,7 +14,7 @@ public class Main {
 
         do {
             imprimirCabecalho();
-            opcao = lerOpcao();
+            opcao = lerOpcao();             
             escolhaMenu(opcao);
         } while (opcao != 5);
     }
