@@ -5,17 +5,19 @@ public class Principal {
 
     public static void main(String[] args) {
 
-        // chamando função
         int opcao = 0;
 
         do {
             try {
                 System.out.println("\n ----------- Calculadora -----------\n");
+                //Captando valor do usuário
                 int valor1 = lerValor("Digite o primeiro valor: ");
                 int valor2 = lerValor("Digite o segundo valor: ");
+                //Imprindo e captando opção menu
                 imprimeMenu();
                 opcao = lerValor("\nDigite uma opção do menu: ");
                 escolhaMenu(opcao, valor1, valor2);
+                //Tratamento divisão por 0
             } catch (ArithmeticException e) {
                 System.out.println("Não é possível fazer a divisão por zero. Favor, tente novamente: ");
             }
@@ -39,7 +41,7 @@ public class Principal {
                 System.out.println(mensagem);
                 valor = Integer.parseInt(sc.nextLine());
                 validacao = true;
-
+            // Tratamento de número    
             } catch (NumberFormatException e) {
                 System.out.println("Dado inválido! Tente novamente.\n");
                 validacao = false;
@@ -65,7 +67,7 @@ public class Principal {
         case 4:
             System.out.println("O resultado da divisão é: " + Calculadora.div(valor1, valor2));
             break;
-
+ 
         case 5:
             System.out.println("Saindo...");
             break;
