@@ -11,7 +11,6 @@ public class Leitura {
 
         try {
             FileInputStream fis = new FileInputStream("dados/series.txt");
-            
             InputStreamReader isr = new InputStreamReader(fis);
             BufferedReader br = new BufferedReader(isr);
             
