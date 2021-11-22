@@ -1,3 +1,4 @@
+package P1;
 public class Empresa {
     public String nome;
     public String cnpj;
