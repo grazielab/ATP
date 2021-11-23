@@ -1,5 +1,8 @@
+package com.alexinha.vendas.servlets;
 import java.io.IOException;
 import java.io.PrintWriter;
+
+import com.alexinha.vendas.models.Categoria;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -8,15 +11,17 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet(urlPatterns = "/categoria")
-public class Categoria extends HttpServlet{
+public class CategoriaServlet extends HttpServlet{
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         
-        String nome = req.getParameter("nome");
-        String descricao = req.getParameter("descricao");
+        Categoria cat1 = new Categoria();
+
+        cat1.setNome(req.getParameter("nome"));
+        cat1.setDescricao(req.getParameter("descricao"));
 
         PrintWriter out = resp.getWriter();
-        out.printf("Modulo Categoria \nNome = %s\nDescricao = %s", nome, descricao);
+        out.printf("-- Modulo Categorias --  \nNome = %s | Descricao = %s", cat1.getNome(),cat1.getDescricao());
     }
 }

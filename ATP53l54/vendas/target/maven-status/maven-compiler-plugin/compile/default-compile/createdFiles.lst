@@ -1,2 +1,4 @@
-Categoria.class
-Produto.class
+com\alexinha\vendas\models\Produto.class
+com\alexinha\vendas\servlets\CategoriaServlet.class
+com\alexinha\vendas\models\Categoria.class
+com\alexinha\vendas\servlets\ProdutoServlet.class
