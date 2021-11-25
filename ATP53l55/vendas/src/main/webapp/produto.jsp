@@ -10,7 +10,7 @@
 
 <body>
     <h1> Cadastro de Produto </h1>
-    <form action="/vendas-1/produto">
+    <form action="/vendas-1/produto" method="post">
         Nome: <input type="text" name="nome" id="nome"><br>
         Valor: R$ <input type="number" name="valor" id="valor" min="0.00" max="10000.0" step="0.01" ><br>
         ID Categoria: <input type="number" name="idCategoria" id="idCategoria"><br><br>
