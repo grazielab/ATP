@@ -14,6 +14,7 @@ public class Clientes {
     private int id;
     private String nome;
     private int idade;
+    private String profissao;
 
     public void setId(int id) {
         this.id = id;
@@ -38,5 +39,11 @@ public class Clientes {
     public int getIdade() {
         return idade;
     }
-
+    public void setProfissao(String profissao) {
+        this.profissao = profissao;
+    }
+    public String getProfissao() {
+        return profissao;
+    }
+ 
 }

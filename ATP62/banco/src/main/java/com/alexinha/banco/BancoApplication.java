@@ -28,11 +28,15 @@ public class BancoApplication implements CommandLineRunner {
 		model.setId(3);
 		model.setNome("Monica Geller");
 		model.setIdade(28);
+		model.setProfissao("Chef de cozinha");
 
 		repository.save(model);
 
 		System.out.println("\n");
-		repository.findAll().forEach(c -> System.out.printf("Nome: %s | Idade: %d\n", c.getNome(), c.getIdade()));
+		System.out.println("-- Cadastro de Cliente --\n");
+		repository.findAll().forEach(c -> System.out.printf("Nome: %s | Idade: %d | Profissão: %s\n", 
+		c.getNome(), c.getIdade(), c.getProfissao()));
+		
 		System.out.println("\n");
 	}
 }

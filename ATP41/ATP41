@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 create table Produto(
 	id int generated always as  identity
 	,nome varchar (50) null
@@ -31,3 +32,38 @@ drop table carro
 alter table produto 
 	add column id_categoria int not null;	
 	
+=======
+create table Produto(
+	id int generated always as  identity
+	,nome varchar (50) null
+	,descricao varchar (100) null
+	,codigo int null
+	,preco varchar (10) null
+);
+
+create table Categoria(
+	id int generated always as  identity
+	,nome varchar (50) null
+	,descricao varchar (100) not null
+);
+
+create table Carro(
+	id int generated always as  identity
+	,modelo  varchar (50) null
+	,marca varchar (30) null
+);
+
+alter table Carro
+	add column chassi varchar (50) null;
+alter table Carro
+	add column ano int null;
+
+alter  table produto 
+	drop column codigo;
+	
+drop table carro 
+
+alter table produto 
+	add column id_categoria int not null;	
+	
+>>>>>>> df69f51d89ed418f492705a637932ff85e97cb1a
