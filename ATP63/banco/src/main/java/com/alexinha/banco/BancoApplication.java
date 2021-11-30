@@ -17,11 +17,10 @@ public class BancoApplication implements CommandLineRunner {
 	private ClientesRepository clientesRepository;
 	private AgenciaRepository agenciaRepository;
 
-
 	public BancoApplication(ClientesRepository clientesRepository, AgenciaRepository agenciaRepository) {
 		this.agenciaRepository = agenciaRepository;
 		this.clientesRepository = clientesRepository;
-		
+
 	}
 
 	public static void main(String[] args) {
@@ -30,8 +29,8 @@ public class BancoApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		
-		//Clientes
+
+		// Clientes
 		Clientes modelClientes = new Clientes();
 		modelClientes.setId(2);
 		modelClientes.setNome("Ross Geller");
@@ -40,20 +39,21 @@ public class BancoApplication implements CommandLineRunner {
 		clientesRepository.save(modelClientes);
 
 		System.out.println("\n");
-		clientesRepository.findAll().forEach(c -> System.out.printf("Nome: %s | Idade: %d | Profissão: %s\n", 
-		c.getNome(), c.getIdade(), c.getProfissao()));
+		clientesRepository.findAll().forEach(c -> System.out.printf("Nome: %s | Idade: %d | Profissão: %s\n",
+				c.getNome(), c.getIdade(), c.getProfissao()));
 		System.out.println("\n");
 
-		//Agencia
+		// Agencia
 		Agencia modelAgencia = new Agencia();
 		modelAgencia.setId(1);
 		modelAgencia.setBanco("Bradesco");
 		modelAgencia.setAgencia(2283);
 		modelAgencia.setLocalizacao("Blumenau");
 		agenciaRepository.save(modelAgencia);
-		
+
+		System.out.println("\n");
 		agenciaRepository.findAll().forEach(a -> System.out.printf("ID: %d | Agência: %s | Localização: %s",
-		a.getId(), a.getBanco(), a.getLocalizacao()));
-		
+				a.getId(), a.getBanco(), a.getLocalizacao()));
+		System.out.println("\n");
 	}
 }
